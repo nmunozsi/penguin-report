@@ -34,31 +34,13 @@ const ZPeepManager = {
   //take into account that it will retrieve every z-peep from given company and
   //there is not such thing like filter by UI dept
   peopleIds: [
-    {[PERSON_NAME]: 'Aiman Samad', [PERSON_ID]: '10739872', hours: 0},
-    {[PERSON_NAME]: 'Alejandro Sanmartin', [PERSON_ID]: '1243347', hours: 0},
-    {[PERSON_NAME]: 'Andres Garcia', [PERSON_ID]: ADMIN_USER_ID, hours: 0},
-    {[PERSON_NAME]: 'Andres Zorro', [PERSON_ID]: '10997106', hours: 0},
-    {[PERSON_NAME]: 'Camilo Soto', [PERSON_ID]: '11527725', hours: 0},
-    {[PERSON_NAME]: 'Cesar Guerrero', [PERSON_ID]: '11842419', hours: 0},
-    {[PERSON_NAME]: 'Daniel Camilo Daza', [PERSON_ID]: '11749582', hours: 0},
-    {[PERSON_NAME]: 'Edin Rivera', [PERSON_ID]: '11657876', hours: 0},
-    {[PERSON_NAME]: 'Fredy Urrego', [PERSON_ID]: '11915855', hours: 0},
-    {[PERSON_NAME]: 'German Galvis', [PERSON_ID]: '1645970', hours: 0},
-    {[PERSON_NAME]: 'Gustavo Morales', [PERSON_ID]: '11934744', hours: 0},
-    {[PERSON_NAME]: 'Jose Conde', [PERSON_ID]: '11925814', hours: 0},
-    {[PERSON_NAME]: 'Juan Pablo Vallejo', [PERSON_ID]: '11943154', hours: 0},
-    {[PERSON_NAME]: 'Luis Carlos Chivata', [PERSON_ID]: '10581568', hours: 0},
-    {[PERSON_NAME]: 'Maria Antonia Serna', [PERSON_ID]: '12108160', hours: 0},
-    {[PERSON_NAME]: 'Mauricio Cubillos', [PERSON_ID]: '11360590', hours: 0},
-    {[PERSON_NAME]: 'Mauricio Florez', [PERSON_ID]: '12131303', hours: 0},
-    {[PERSON_NAME]: 'Nicolas Lopez', [PERSON_ID]: '12213547', hours: 0},
-    {[PERSON_NAME]: 'Orlando Donado', [PERSON_ID]: '11926495', hours: 0}
-    // {[PERSON_NAME]: 'Javier Jaimes', [PERSON_ID]: '11926506', hours: 0},
-    // {[PERSON_NAME]: 'Andres Acevedo', [PERSON_ID]: '11890705', hours: 0},
-    // {[PERSON_NAME]: 'Carlos Acero', [PERSON_ID] : '12109484', hours: 0},
-    // {[PERSON_NAME]: 'Nicolas Muñoz', [PERSON_ID]: '12224662', hours: 0},
-    // {[PERSON_NAME]: 'Pablo Dorado', [PERSON_ID] : '12104247', hours: 0},
-    // {[PERSON_NAME]: 'Pedro Patron', [PERSON_ID] : '11915402', hours: 0},
+    {[PERSON_NAME]: 'Katherine Renteria', [PERSON_ID] : '10285578', hours: 0},
+    {[PERSON_NAME]: 'David Alvarez', [PERSON_ID] : '7303296', hours: 0},
+    {[PERSON_NAME]: 'Paola Gonzalez', [PERSON_ID] : '4056246', hours: 0},
+    {[PERSON_NAME]: 'Vivian Garzon', [PERSON_ID] : '12131306', hours: 0},
+    {[PERSON_NAME]: 'Jose Ignacio', [PERSON_ID] : '12003619', hours: 0},
+    {[PERSON_NAME]: 'Nicolas Muñoz', [PERSON_ID]: '12224662', hours: 0},
+    {[PERSON_NAME]: 'David Jurado', [PERSON_ID]: '12296211', hours: 0}
   ],
 
   /**
