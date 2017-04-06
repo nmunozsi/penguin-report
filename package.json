@@ -16,7 +16,7 @@
     "start:development": "babel -w source/ -d build/ -s & env $(cat .env-local | xargs) nodemon build",
     "package": "npm run package:prepare && npm run package:node && npm run package:web && npm run package:combine",
     "package:prepare": "npm prune --production",
-    "package:combine": "zip -qr ./penguin-report_`date +%y.%m.%d`.zip node.zip web.zip && rm -rf ./node.zip ./web.zip",
+    "package:combine": "zip -qr ./penguin-pmo-report_`date +%y.%m.%d`.zip node.zip web.zip && rm -rf ./node.zip ./web.zip",
     "package:node": "zip -r ./node.zip node_modules .env package.json build",
     "package:web": "cd web; zip -qr ../web.zip .; cd ..",
     "postinstall": "per-env",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oagarcia/penguin-report"
+    "url": "https://github.com/nmunozsi/penguin-report"
   },
   "keywords": [
     "Basecamp,zemoga"
