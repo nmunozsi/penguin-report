@@ -33,64 +33,64 @@ const PenguinReport = {
     let serviceWorkerRegistration;
 
     // Register the service worker
-    navigator.serviceWorker.register(PenguinReport.ROOT_URI + '/sw.js', {
-      scope: PenguinReport.ROOT_URI
-    })
-    .then((registration) => {
-      console.log('Service worker registered', registration);
-      return navigator.serviceWorker.ready;
-    })
-    // We need the service worker registration to check for a subscription
-    .then((registration) => {
-      console.log('Service worker ready');
+    // navigator.serviceWorker.register(PenguinReport.ROOT_URI + '/sw.js', {
+    //   scope: PenguinReport.ROOT_URI
+    // })
+    // .then((registration) => {
+    //   console.log('Service worker registered', registration);
+    //   return navigator.serviceWorker.ready;
+    // })
+    // // We need the service worker registration to check for a subscription
+    // .then((registration) => {
+    //   console.log('Service worker ready');
 
-      serviceWorkerRegistration = registration;
+    //   serviceWorkerRegistration = registration;
 
-      return serviceWorkerRegistration.pushManager.subscribe({
-        userVisibleOnly: true
-      });
-    })
-    .then((sub) => {
-      const endpointParts = sub.endpoint.split('/');
-      const pushRegistry = endpointParts[endpointParts.length - 1];
+    //   return serviceWorkerRegistration.pushManager.subscribe({
+    //     userVisibleOnly: true
+    //   });
+    // })
+    // .then((sub) => {
+    //   const endpointParts = sub.endpoint.split('/');
+    //   const pushRegistry = endpointParts[endpointParts.length - 1];
 
-      console.log('User authorized the notifications: ', sub.endpoint);
+    //   console.log('User authorized the notifications: ', sub.endpoint);
 
-      if (localStorage.getItem(PenguinReport.STORAGE_IDENTIFIER)) {
-        fetch(PenguinReport.ROOT_URI + '/sync-user/?user=' + localStorage.getItem(PenguinReport.STORAGE_IDENTIFIER) + '&registry=' + pushRegistry)
-        .then((response) => {
-          if (response.status !== 200) {
-            // Either show a message to the user explaining the error
-            // or enter a generic message and handle the
-            // onnotificationclick event to direct the user to a web page
-            console.log('Looks like there was a problem. Status Code: ' + response.status);
-            throw new Error();
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log('the data', data);
-        })
-        .catch((err) => {
-          console.error('Unable to retrieve data', err);
-        });
-      }
+    //   if (localStorage.getItem(PenguinReport.STORAGE_IDENTIFIER)) {
+    //     fetch(PenguinReport.ROOT_URI + '/sync-user/?user=' + localStorage.getItem(PenguinReport.STORAGE_IDENTIFIER) + '&registry=' + pushRegistry)
+    //     .then((response) => {
+    //       if (response.status !== 200) {
+    //         // Either show a message to the user explaining the error
+    //         // or enter a generic message and handle the
+    //         // onnotificationclick event to direct the user to a web page
+    //         console.log('Looks like there was a problem. Status Code: ' + response.status);
+    //         throw new Error();
+    //       }
+    //       return response.json();
+    //     })
+    //     .then((data) => {
+    //       console.log('the data', data);
+    //     })
+    //     .catch((err) => {
+    //       console.error('Unable to retrieve data', err);
+    //     });
+    //   }
 
-      // Do we already have a push message subscription?
-      return serviceWorkerRegistration.pushManager.getSubscription();
-    })
-    .then((subscription) => {
-      // Enable any UI which subscribes / unsubscribes from
-      // push messages.
-      console.log('the suscription', subscription);
+    //   // Do we already have a push message subscription?
+    //   return serviceWorkerRegistration.pushManager.getSubscription();
+    // })
+    // .then((subscription) => {
+    //   // Enable any UI which subscribes / unsubscribes from
+    //   // push messages.
+    //   console.log('the suscription', subscription);
 
-      if (subscription && subscription.endpoint) {
-        console.log('and the suscription is ', subscription.endpoint);
-      }
-    })
-    .catch((err) => {
-      console.warn('Error during service worker registration workflow', err);
-    });
+    //   if (subscription && subscription.endpoint) {
+    //     console.log('and the suscription is ', subscription.endpoint);
+    //   }
+    // })
+    // .catch((err) => {
+    //   console.warn('Error during service worker registration workflow', err);
+    // });
   },
 
   /**
@@ -158,4 +158,4 @@ const PenguinReport = {
 };
 
 //Initialize
-PenguinReport.init();
+//PenguinReport.init();

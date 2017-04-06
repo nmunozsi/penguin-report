@@ -123,7 +123,6 @@ app.get('/', (req, res) => {
             <link rel="icon" type="image/png" href="${CONFIG.ROOT_URI}/images/favicon.png">
           </head>
           <body>
-            ${Utils.zPeepsSelectorRenderer(ZPeepManager.peopleIds)}
             <div class="title-container">
               <h1>Penguin UI Report</h1>
               <form action="" method="GET">

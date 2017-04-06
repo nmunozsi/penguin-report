@@ -1,7 +1,7 @@
 export default Object.assign({
   PROTOCOL: 'https://',
   DOMAIN: 'uitraining.zemoga.com',
-  ROOT_URI: '/penguin-report',
+  ROOT_URI: '/penguin-pmo-report',
 
   PERSON_ID: 'person-id',
   PERSON_NAME: 'person-name',
